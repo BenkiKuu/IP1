@@ -1,8 +1,11 @@
 <div class="container-fluid">
   <div class="jumbotron">
-    <h1>My Goals</h1>
+    <h1>IT WAS SAID</h1>
   </div>
   <hr>
+  <div class="row">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
   <ul>
     <div *ngFor='let quote of quotes; let i=index'>
       <div class="row">
