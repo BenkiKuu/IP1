@@ -1,14 +1,21 @@
-<h1>My Goals</h1>
-<hr>
-
-<ul>
-  <div *ngFor='let quote of quotes; let i=index'>
-        <li >{{ quote.name }}</li>
-        <button  (click)='toogleDetails(i)'>Toogle Details</button>
-        <app-quote-detail *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-detail>
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1>My Goals</h1>
+  </div>
+  <hr>
+  <ul>
+    <div *ngFor='let quote of quotes; let i=index'>
+      <div class="row">
+        <li id="{{i}}" appHighlight>{{ quote.name }} due on {{quote.completeDate | date | uppercase}}</li>
+        <button (click)='toogleDetails(i)'>Toogle Details</button>
+      </div>
+      <div class="row">
+        <app-quote-detail *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-detail>
+      </div>
     </div>
-</ul>
-<p *ngIf='quotes.length > 5'>You have too many quotes</p>
-  <!-- <li *ngFor='let quote of quotes'>{{quote.name}}</li>
+  </ul>
+  <p *ngIf='quotes.length > 5'>You have too many quotes</p>
+</div>
+<!-- <li *ngFor='let quote of quotes'>{{quote.name}}</li>
 </ul>
 <p *ngIf='quotes.length > 5'>You have too many goals</p> -->

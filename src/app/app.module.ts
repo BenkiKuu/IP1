@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { FormComponent } from './form/form.component';
 import { HighlightDirective } from './highlight.directive';
-import { DatePipe } from './date.pipe';
+// import { DatePipe } from './date.pipe';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
-import { StikethroughDirective } from './stikethrough.directive';
+import { TimeCountPipe } from './time-count.pipe';
+
 
 @NgModule({
   declarations: [
@@ -15,9 +16,9 @@ import { StikethroughDirective } from './stikethrough.directive';
     QuotesComponent,
     FormComponent,
     HighlightDirective,
-    DatePipe,
     QuoteDetailComponent,
-    StikethroughDirective
+    TimeCountPipe
+
   ],
   imports: [
     BrowserModule
