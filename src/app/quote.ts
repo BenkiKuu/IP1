@@ -5,8 +5,8 @@ export class Quote {
     public name:string,
     public description:string,
     public author:string,
-    public completeDate:Date
-    public likes:number
+    public completeDate:Date,
+    public likes:number,
     public dislikes: number){
     this.showDescription=false
   }
