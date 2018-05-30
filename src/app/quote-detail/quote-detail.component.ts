@@ -15,5 +15,5 @@ quoteComplete(complete:boolean){
 
   ngOnInit() {
   }
-
+  
 }

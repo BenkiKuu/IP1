@@ -1,3 +1,6 @@
+<p>{{quote.author}}</p>
 <p>{{quote.description}}</p>
 <p>This Quote was posted {{quote.completeDate|timeCount}} ago</p>
-<button (click) = 'quoteComplete(true)'> Delete </button>
+<button (click) = 'quoteComplete(true)' class="btn"> Delete </button>
+<button (click)= 'quote.likes= quote.likes + 1'class="btn">Like{{quote.likes}}</button>
+<button (click)= 'quote.dislikes=quote.dislikes+1' class="btn">DisLike{{quote.dislikes}}</button>

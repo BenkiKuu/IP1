@@ -4,20 +4,27 @@
   </div>
   <hr>
   <div class="row">
+    <div class="col-4-md">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
+    <div class="col-4-md">
+<p>fkuhfblvijlvjhbvljhbljn;kdjnk;djn;kj</p>
+    </div>
+    <div class="col-4-md">
   <ul>
     <div *ngFor='let quote of quotes; let i=index'>
-      <div class="row">
+      <div>
         <li id="{{i}}" appHighlight>{{ quote.name }} due on {{quote.completeDate | date | uppercase}}</li>
         <button (click)='toogleDetails(i)'>Toogle Details</button>
       </div>
-      <div class="row">
+      <div>
         <app-quote-detail *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-detail>
       </div>
     </div>
   </ul>
-  <p *ngIf='quotes.length > 5'>You have too many quotes</p>
+  </div>
+</div>
+
 </div>
 <!-- <li *ngFor='let quote of quotes'>{{quote.name}}</li>
 </ul>
