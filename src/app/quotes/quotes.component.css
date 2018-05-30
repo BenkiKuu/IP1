@@ -1,0 +1,38 @@
+#mid{
+  padding-left: 20px;
+}
+#body{
+  background: rgba(0,0,0,0.5)
+}
+#head{
+  background-image: url("src/assets/header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  }
+.container-fluid{
+  background-image: url("src/assets/body.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0;
+}
+#frm{
+padding-left: 20px;
+color: #FFD700
+}
+#quote{
+  padding-left: 20px;
+}
+h2 {
+  color: #FFD700
+}
+h1 {
+  color:  #FFD700
+}
+p{
+  color:  #FFD700
+}
+hr{
+  border: solid #FFD700
+}

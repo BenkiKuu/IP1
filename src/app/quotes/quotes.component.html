@@ -1,28 +1,38 @@
 <div class="container-fluid">
-  <div class="jumbotron">
-    <h1>IT WAS SAID</h1>
+<div id=body>
+  <div class="jumbotron"id=head>
+    <h1>IT IS WRITTEN</h1>
   </div>
   <hr>
   <div class="row">
-    <div class="col-4-md">
+    <div class="col-md-6" id=frm>
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-    <div class="col-4-md">
-<p>fkuhfblvijlvjhbvljhbljn;kdjnk;djn;kj</p>
+    <div class="col-md-6" id=mid>
+<h2>African culture has for long had an oral tradition,
+For millenia our ancestors passed down wisdom
+customs and our way of life. <strong>IT IS WRITTEN</strong>
+seeks to bring back that timely tradition. Post a quote.
+or scroll down to benefit from what was said for <strong>IT IS WRITTEN...</strong></h2 >
     </div>
-    <div class="col-4-md">
-  <ul>
+    </div>
+    <div class="row" id=quote>
+
+
+    <div class="col-6-md">
+
     <div *ngFor='let quote of quotes; let i=index'>
       <div>
-        <li id="{{i}}" appHighlight>{{ quote.name }} due on {{quote.completeDate | date | uppercase}}</li>
-        <button (click)='toogleDetails(i)'>Toogle Details</button>
+        <p id="{{i}}" appHighlight>{{ quote.name }} </p>
+        <button (click)='toogleDetails(i)' class="btn btn-outline-info">See Quote</button>
       </div>
       <div>
         <app-quote-detail *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-detail>
       </div>
     </div>
-  </ul>
   </div>
+  </div>
+
 </div>
 
 </div>
