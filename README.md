@@ -6,7 +6,7 @@ The web application is a site that allows you to post, delete and vote on Quotes
 ## Setup/Installation Requirements
 * Create a directory
 * Initialize git using the git init comand
-* Then the git clone https://github.com/BenkiKuu/ip3.git comand.
+* Then the git clone https://github.com/BenkiKuu/IP1.git comand.
 * Then go to the directory.
 * Open in Atom.
 ## Known Bugs
